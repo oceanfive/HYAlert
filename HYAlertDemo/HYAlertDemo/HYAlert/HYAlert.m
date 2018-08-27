@@ -122,4 +122,8 @@
     return [UIDevice currentDevice].systemVersion.doubleValue >= 8;
 }
 
+- (void)dealloc {
+    NSLog(@"HYAlert dealloc");
+}
+
 @end

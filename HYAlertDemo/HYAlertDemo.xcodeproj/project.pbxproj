@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E42B0772132E6D4008A09C5 /* 6播放录音.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E42B0762132E6D4008A09C5 /* 6播放录音.png */; };
+		8E42B0792132E76C008A09C5 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E42B0782132E76C008A09C5 /* image.png */; };
+		8E42B07F2132F4F6008A09C5 /* HYActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42B07E2132F4F6008A09C5 /* HYActionSheetView.m */; };
 		8EC905A621241D1B00B9DB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC905A521241D1B00B9DB8D /* AppDelegate.m */; };
 		8EC905A921241D1B00B9DB8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC905A821241D1B00B9DB8D /* ViewController.m */; };
 		8EC905AC21241D1B00B9DB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC905AA21241D1B00B9DB8D /* Main.storyboard */; };
@@ -17,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E42B0762132E6D4008A09C5 /* 6播放录音.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6播放录音.png"; sourceTree = "<group>"; };
+		8E42B0782132E76C008A09C5 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		8E42B07D2132F4F6008A09C5 /* HYActionSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYActionSheetView.h; sourceTree = "<group>"; };
+		8E42B07E2132F4F6008A09C5 /* HYActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYActionSheetView.m; sourceTree = "<group>"; };
 		8EC905A121241D1B00B9DB8D /* HYAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC905A421241D1B00B9DB8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EC905A521241D1B00B9DB8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 				8EC905A521241D1B00B9DB8D /* AppDelegate.m */,
 				8EC905A721241D1B00B9DB8D /* ViewController.h */,
 				8EC905A821241D1B00B9DB8D /* ViewController.m */,
+				8E42B0762132E6D4008A09C5 /* 6播放录音.png */,
+				8E42B0782132E76C008A09C5 /* image.png */,
 				8EC905AA21241D1B00B9DB8D /* Main.storyboard */,
 				8EC905AD21241D1C00B9DB8D /* Assets.xcassets */,
 				8EC905AF21241D1C00B9DB8D /* LaunchScreen.storyboard */,
@@ -80,6 +89,8 @@
 			children = (
 				8EC905BC21241D4700B9DB8D /* HYAlert.h */,
 				8EC905BB21241D4700B9DB8D /* HYAlert.m */,
+				8E42B07D2132F4F6008A09C5 /* HYActionSheetView.h */,
+				8E42B07E2132F4F6008A09C5 /* HYActionSheetView.m */,
 			);
 			path = HYAlert;
 			sourceTree = "<group>";
@@ -142,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC905B121241D1C00B9DB8D /* LaunchScreen.storyboard in Resources */,
+				8E42B0772132E6D4008A09C5 /* 6播放录音.png in Resources */,
 				8EC905AE21241D1C00B9DB8D /* Assets.xcassets in Resources */,
+				8E42B0792132E76C008A09C5 /* image.png in Resources */,
 				8EC905AC21241D1B00B9DB8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +169,7 @@
 			files = (
 				8EC905A921241D1B00B9DB8D /* ViewController.m in Sources */,
 				8EC905BD21241D4700B9DB8D /* HYAlert.m in Sources */,
+				8E42B07F2132F4F6008A09C5 /* HYActionSheetView.m in Sources */,
 				8EC905B421241D1C00B9DB8D /* main.m in Sources */,
 				8EC905A621241D1B00B9DB8D /* AppDelegate.m in Sources */,
 			);
@@ -298,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D94N38GZR8;
 				INFOPLIST_FILE = HYAlertDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D94N38GZR8;
 				INFOPLIST_FILE = HYAlertDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
