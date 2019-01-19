@@ -52,29 +52,37 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    HYAlert *alert = [[HYAlert alloc] initWithTitle:@"title" message:@"message" preferredStyle:HYAlertStyleAlert];
-    [alert addActionWithTitle:@"按钮1" style:HYAlertActionStyleDefault handler:^{
-        NSLog(@"1111");
-    }];
-    [alert addActionWithTitle:@"按钮2" style:HYAlertActionStyleCancel handler:nil];
-    [alert addActionWithTitle:@"按钮3" style:HYAlertActionStyleDestructive handler:^{
-        NSLog(@"333");
-    }];
-    [alert showInViewController:self];
-    
-    
-    
-//    HYActionSheetView *sheetView = [[HYActionSheetView alloc] init];
-//    [sheetView addActionWithTitle:@"确定" handler:^{
-//        NSLog(@"确定 --- ");
+//    HYAlert *alert = [[HYAlert alloc] initWithTitle:@"title" message:@"message" preferredStyle:HYAlertStyleAlert];
+//    [alert addActionWithTitle:@"按钮1" style:HYAlertActionStyleDefault handler:^{
+//        NSLog(@"1111");
 //    }];
-//    [sheetView addActionWithTitle:@"测试" handler:^{
-//        NSLog(@"测试 --- ");
+//    [alert addActionWithTitle:@"按钮2" style:HYAlertActionStyleCancel handler:nil];
+//    [alert addActionWithTitle:@"按钮3" style:HYAlertActionStyleDestructive handler:^{
+//        NSLog(@"333");
 //    }];
-////    sheetView.cellHeight = 100;
-////    sheetView.titleFont = [UIFont systemFontOfSize:40];
-////    sheetView.titleColor = [UIColor redColor];
-//    [sheetView show];
+//    [alert showInViewController:self];
+    
+    
+    
+    HYActionSheetView *sheetView = [[HYActionSheetView alloc] init];
+    
+//    sheetView.titleColor = [UIColor redColor];
+//    sheetView.titleFont = [UIFont systemFontOfSize:30];
+//    sheetView.cellHeight = 80;
+//    sheetView.spacing = 20;
+//    sheetView.cancelText = @"你好呀";
+    
+    [sheetView addActionWithTitle:@"第一个" handler:^{
+        NSLog(@"第一个");
+    }];
+    [sheetView addActionWithTitle:@"第二个" handler:^{
+        NSLog(@"第二个");
+    }];
+    [sheetView addActionWithTitle:@"第三个" handler:^{
+        NSLog(@"第三个");
+    }];
+    
+    [sheetView show];
 }
 
 - (void)didReceiveMemoryWarning {

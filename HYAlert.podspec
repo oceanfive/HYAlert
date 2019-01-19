@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HYAlert"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "HYAlert"
   s.description  = <<-DESC
   OC 中 Alert 的封装，根据不同的版本选取不同的控件

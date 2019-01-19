@@ -89,9 +89,6 @@
 
 @interface HYActionSheetView ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, assign) CGFloat spacing;
-@property (nonatomic, copy) NSString *cancelText;
-
 /// 添加手势，点击消失，self添加手势不起作用！
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UITableView *mTableView;
@@ -104,19 +101,7 @@
 
 @implementation HYActionSheetView
 
-- (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-    }
-    return _dataSource;
-}
-
-- (NSMutableArray *)handlers {
-    if (!_handlers) {
-        _handlers = [NSMutableArray array];
-    }
-    return _handlers;
-}
+#pragma mark - Init
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -130,6 +115,7 @@
     }
     return self;
 }
+
 - (void)initSubviews {
     self.mTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -208,7 +194,7 @@
     if (!headerView) {
         headerView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:headerIdentifer];
         UIView *bgView = [[UIView alloc] init];
-        bgView.backgroundColor = [UIColor clearColor];
+        bgView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
         bgView.frame = headerView.bounds;
         headerView.backgroundView = bgView;
     }
@@ -270,7 +256,7 @@
     [UIView animateWithDuration:HY_ANIMATION_DURATON delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.frame = keyWindow.bounds;
     } completion:^(BOOL finished) {
-
+        
     }];
     // backgroundColor 动画；延时执行，避免突兀，不会显示“self黑框”上移动画
     self.backgroundColor = [UIColor clearColor];
@@ -291,6 +277,7 @@
     [UIView animateWithDuration:HY_ANIMATION_DURATON delay:0  options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.mTableView.frame = frame;
     } completion:^(BOOL finished) {
+        // 清空背景色，否则会突兀
         self.backgroundColor = [UIColor clearColor];
         [self removeFromSuperview];
     }];
@@ -315,5 +302,21 @@
     NSLog(@"HYActionSheetView dealloc");
 }
 
+
+#pragma mark - Lazy
+
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
+
+- (NSMutableArray *)handlers {
+    if (!_handlers) {
+        _handlers = [NSMutableArray array];
+    }
+    return _handlers;
+}
 
 @end
